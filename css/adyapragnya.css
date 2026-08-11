@@ -1136,3 +1136,21 @@ input, textarea, a[href^="tel:"], a[href^="mailto:"],
 .contact-info-item, .footer-contact-item, .footer-info-list {
     -webkit-user-select: text; -moz-user-select: text; -ms-user-select: text; user-select: text;
 }
+
+/* ---- Offcanvas sidebar: indigo panel (was full orange) -------------- */
+.header-sidebar-btn .offcanvas { background: var(--primary-color) !important; }
+.header-sidebar-btn .offcanvas .header-contact-box .icon-box { background-color: var(--accent-color); }
+.header-sidebar-btn .offcanvas .header-contact-box-content h3,
+.header-sidebar-btn .offcanvas .header-contact-box-content p,
+.header-sidebar-btn .offcanvas .header-contact-box-content a,
+.header-sidebar-btn .offcanvas .header-social-links h2 { color: var(--white-color); }
+.header-sidebar-btn .offcanvas .header-social-links ul li a {
+    color: var(--white-color);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+.header-sidebar-btn .offcanvas .header-social-links ul li a:hover {
+    background: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--primary-color);
+}
+.header-sidebar-btn .offcanvas .btn-close { filter: invert(1); }
