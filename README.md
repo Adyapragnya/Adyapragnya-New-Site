@@ -3,16 +3,16 @@
 Static website built on the **Greva** HTML template, with Adyapragnya content and branding.
 
 ## How to run
-Open `index-3.html` (the homepage) directly in a browser, **or** serve the `site/`
+Open `index.html` (the homepage) directly in a browser, **or** serve the `site/`
 folder with any static server (e.g. VS Code **Live Server** → right-click
-`index-3.html` → "Open with Live Server").
+`index.html` → "Open with Live Server").
 
-> The homepage is **`index-3.html`** (there is no `index.html`).
+> The homepage is **`index.html`** (there is no `index.html`).
 
 ## Folder structure
 ```
 site/
-├── index-3.html        # Home
+├── index.html        # Home
 ├── about.html
 ├── products.html       # 7 products
 ├── oem-products.html   # 5 OEM partners
@@ -46,7 +46,7 @@ nav item automatically.
 ## Things to replace later
 - **Hero video**: currently uses the template's demo video URL as a placeholder.
   Drop your own `images/hero-bg-video.mp4` and point the `<video>` source to it
-  in `index-3.html` (a poster image already falls back if the video fails).
+  in `index.html` (a poster image already falls back if the video fails).
 - **Logo**: the source PNG is square (icon + wordmark). A horizontal logo would
   look cleaner in the header.
 - **Team photos / testimonials**: template placeholders — swap for real people.

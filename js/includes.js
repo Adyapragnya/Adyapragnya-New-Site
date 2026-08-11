@@ -20,11 +20,11 @@
       '<div class="header-sticky">' +
         '<nav class="navbar navbar-expand-lg">' +
           '<div class="container-fluid">' +
-            '<a class="navbar-brand" href="index-3.html" aria-label="Adyapragnya Technologies home"><img class="company-logo-full" src="images/adyapragnya-logo.png" alt="Adyapragnya"><span class="brand-wordmark">Adyapragnya</span></a>' +
+            '<a class="navbar-brand" href="index.html" aria-label="Adyapragnya Technologies home"><img class="company-logo-full" src="images/adyapragnya-logo.png" alt="Adyapragnya"><span class="brand-wordmark">Adyapragnya</span></a>' +
             '<div class="collapse navbar-collapse main-menu">' +
               '<div class="nav-menu-wrapper">' +
                 '<ul class="navbar-nav mr-auto" id="menu">' +
-                  '<li class="nav-item"><a class="nav-link" href="index-3.html">Home</a></li>' +
+                  '<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>' +
                   '<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>' +
                   '<li class="nav-item submenu"><a class="nav-link" href="products.html">Products</a>' +
                     '<ul>' +
@@ -81,7 +81,7 @@
           '</div>' +
           '<div class="col-xl-4"><div class="about-footer">' +
             '<div class="footer-brand-lockup">' +
-              '<a class="footer-logo" href="index-3.html" aria-label="Adyapragnya Technologies home"><img class="company-logo-full" src="images/adyapragnya-logo.png" alt="Adyapragnya"></a>' +
+              '<a class="footer-logo" href="index.html" aria-label="Adyapragnya Technologies home"><img class="company-logo-full" src="images/adyapragnya-logo.png" alt="Adyapragnya"></a>' +
               '<div class="footer-brand-text"><span class="footer-brand-name">Adyapragnya Technologies Private Limited</span><span class="footer-brand-tag">A Spatial Company</span></div>' +
             '</div>' +
             '<div class="about-footer-content"><p>We deliver Geospatial Intelligence, Enterprise Software, AI, Remote Sensing, Drone, and Digital Transformation solutions that turn data into intelligence and intelligence into action.</p></div>' +
@@ -100,7 +100,7 @@
           '</div></div>' +
           '<div class="col-xl-8"><div class="footer-links-box">' +
             '<div class="footer-links"><h2>Company</h2><ul>' +
-              '<li><a href="index-3.html">Home</a></li>' +
+              '<li><a href="index.html">Home</a></li>' +
               '<li><a href="about.html">About Us</a></li>' +
               '<li><a href="services.html">Services</a></li>' +
               '<li><a href="solutions.html">Solutions</a></li>' +

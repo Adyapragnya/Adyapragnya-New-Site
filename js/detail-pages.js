@@ -154,7 +154,7 @@
         var id = mount.getAttribute("data-detail-id");
         var detail = DETAILS[id];
         if (!detail) {
-            mount.innerHTML = '<div class="container" style="padding:120px 0"><h1>Page not found</h1><p><a href="index-3.html">Return home</a></p></div>';
+            mount.innerHTML = '<div class="container" style="padding:120px 0"><h1>Page not found</h1><p><a href="index.html">Return home</a></p></div>';
             return;
         }
 
@@ -170,7 +170,7 @@
                 '<div class="container"><div class="row"><div class="col-lg-12"><div class="page-header-box">' +
                     '<h1>' + escapeHtml(detail.title) + '</h1>' +
                     '<nav><ol class="breadcrumb">' +
-                        '<li class="breadcrumb-item"><a href="index-3.html">Home</a></li>' +
+                        '<li class="breadcrumb-item"><a href="index.html">Home</a></li>' +
                         '<li class="breadcrumb-item"><a href="' + listingUrl + '">' + listingLabel + '</a></li>' +
                         '<li class="breadcrumb-item active" aria-current="page">' + escapeHtml(detail.title) + '</li>' +
                     '</ol></nav>' +
