@@ -8,9 +8,24 @@
 	if (isCompactDevice) {
 		document.documentElement.classList.add('mobile-motion-lite');
 		Array.prototype.forEach.call(document.querySelectorAll('video[autoplay]'), function(video){
-			video.pause();
-			video.removeAttribute('autoplay');
-			video.preload = 'none';
+			video.muted = true;
+			video.defaultMuted = true;
+			video.setAttribute('muted', '');
+			video.setAttribute('playsinline', '');
+			video.preload = 'metadata';
+
+			var playPromise = video.play();
+			if (playPromise && typeof playPromise.catch === 'function') {
+				playPromise.catch(function(){
+					var resumeVideo = function(){
+						video.play().catch(function(){});
+						document.removeEventListener('touchstart', resumeVideo);
+						document.removeEventListener('pointerdown', resumeVideo);
+					};
+					document.addEventListener('touchstart', resumeVideo, { once: true, passive: true });
+					document.addEventListener('pointerdown', resumeVideo, { once: true, passive: true });
+				});
+			}
 		});
 	}
 
@@ -579,7 +594,7 @@
 	/* Interactive homepage hero: spring-based cinematic 3D depth. */
 	(function initInteractiveHero(){
 		var hero = document.querySelector('.hero-interactive');
-		if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches || isCompactDevice) return;
 
 		var content = hero.querySelector('.hero-content-box-silver');
 		var video = hero.querySelector('.hero-bg-video-silver video');
