@@ -4,9 +4,18 @@
 	var $window = $(window); 
 	var $body = $('body'); 
 	var smoothScroll = null;
+	var isCompactDevice = window.matchMedia('(max-width: 767px), (hover: none), (pointer: coarse)').matches;
+	if (isCompactDevice) {
+		document.documentElement.classList.add('mobile-motion-lite');
+		Array.prototype.forEach.call(document.querySelectorAll('video[autoplay]'), function(video){
+			video.pause();
+			video.removeAttribute('autoplay');
+			video.preload = 'none';
+		});
+	}
 
 	/* Momentum scrolling: wheel, trackpad, touch and anchor links */
-	if(typeof Lenis !== 'undefined'){
+	if(typeof Lenis !== 'undefined' && !isCompactDevice){
 		try {
 			smoothScroll = new Lenis({
 				autoRaf: true,
@@ -86,7 +95,16 @@
 	/* Slick Menu JS */
 	$('#menu').slicknav({
 		label : '',
-		prependTo : '.responsive-menu'
+		prependTo : '.responsive-menu',
+		closeOnClick : true,
+		beforeOpen : function(){
+			document.documentElement.classList.add('mobile-menu-open');
+		},
+		afterClose : function(){
+			if (!$('.slicknav_btn').hasClass('slicknav_open')) {
+				document.documentElement.classList.remove('mobile-menu-open');
+			}
+		}
 	});
 
 	if($("a[href='#top']").length){
@@ -214,7 +232,7 @@
 		var counters = document.querySelectorAll('.count-up');
 		if (!counters.length) return;
 
-		var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches || isCompactDevice;
 		var formatter = new Intl.NumberFormat('en-IN');
 
 		function finalText(element){
@@ -280,7 +298,7 @@
 	})();
 
 	/* Image Reveal Animation */
-	if ($('.reveal').length) {
+	if ($('.reveal').length && !isCompactDevice) {
         gsap.registerPlugin(ScrollTrigger);
         let revealContainers = document.querySelectorAll(".reveal");
         revealContainers.forEach((container) => {
@@ -309,7 +327,7 @@
 
 	/* Text Effect Animation */
 	function initHeadingAnimation() {
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || isCompactDevice) return;
 		gsap.registerPlugin(SplitText, ScrollTrigger);
 		
 		if($('.text-effect').length) {
@@ -520,7 +538,11 @@
 
 	
 	/* Animated Wow Js */	
-	new WOW().init();
+	if (isCompactDevice) {
+		$('.wow').css('visibility', 'visible').removeClass('wow animated');
+	} else {
+		new WOW().init();
+	}
 
 	/* Popup Video */
 	if ($('.popup-video').length) {
@@ -653,7 +675,7 @@
 		var hero = document.querySelector('.hero-interactive');
 		if (!hero) return;
 		hero.classList.add('has-cinematic-intro');
-		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || isCompactDevice) {
 			hero.classList.add('is-intro-ready');
 			return;
 		}
@@ -759,7 +781,7 @@
 		if (!field) return;
 
 		var elements = Array.prototype.slice.call(field.querySelectorAll('.oem-gravity-item'));
-		var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+		var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches || isCompactDevice;
 		var bodies = [];
 		var frame = 0;
 		var previousTime = 0;
@@ -1035,7 +1057,7 @@
    below. IntersectionObserver keeps this event-driven with no scroll loop.
    ===================================================================== */
 (function initSectionHandOff(){
-	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || window.matchMedia('(max-width: 767px), (hover: none), (pointer: coarse)').matches) return;
 
 	function collectSections(){
 		var sections = [];

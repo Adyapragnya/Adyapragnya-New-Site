@@ -2461,6 +2461,115 @@ h1, h2 { font-weight: 500; }
     }
 }
 
+/* ---------------------------------------------------------------------
+   Shared CTA integrity guard
+   Keep labels and arrow glyphs readable across Products, Services,
+   Solutions, OEM cards, and generated detail pages.
+   --------------------------------------------------------------------- */
+.btn-default { isolation: isolate; }
+
+.catalog-section .service-item-btn .btn-default,
+.catalog-section .service-item-btn .btn-default.btn-highlighted,
+.catalog-section .service-item-btn .btn-default:focus-visible {
+    width: auto;
+    min-height: 46px;
+    padding: 14px 56px 14px 22px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 999px;
+    color: #fff !important;
+    background: var(--violet-gradient) !important;
+    box-shadow: 0 12px 28px rgba(var(--brand-accent-rgb), 0.22);
+}
+
+.catalog-section .service-item-btn .btn-default::before,
+.catalog-section .service-item-btn .btn-default:hover::before,
+.catalog-section .service-item-btn .btn-default:focus-visible::before {
+    right: 5px;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.16) !important;
+    background-image: url('../images/arrow-white.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 14px 14px !important;
+}
+
+.catalog-section .service-item-btn .btn-default::after { display: none !important; }
+
+.catalog-section .service-item-btn .btn-default:hover,
+.catalog-section .service-item-btn .btn-default:focus-visible {
+    color: #fff !important;
+    background: linear-gradient(135deg, #321866 0%, #5D37A3 100%) !important;
+    box-shadow: 0 16px 34px rgba(var(--brand-accent-rgb), 0.30);
+    transform: translateY(-2px);
+}
+
+.detail-cta {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background:
+        radial-gradient(circle at 88% 10%, rgba(255, 255, 255, 0.14), transparent 34%),
+        linear-gradient(135deg, #203E5F 0%, #382B70 52%, #4D2B8C 100%);
+    box-shadow: 0 24px 54px rgba(32, 62, 95, 0.20);
+}
+
+.detail-cta h2,
+.detail-cta p { color: #fff !important; }
+.detail-cta p { opacity: 0.82; }
+
+.detail-cta .btn-default,
+.detail-cta .btn-default:focus-visible {
+    color: var(--accent-color) !important;
+    background: #fff !important;
+    box-shadow: 0 12px 28px rgba(10, 16, 36, 0.18);
+}
+
+.detail-cta .btn-default::before,
+.detail-cta .btn-default:hover::before,
+.detail-cta .btn-default:focus-visible::before {
+    z-index: 2;
+    background-color: var(--accent-color) !important;
+    background-image: url('../images/arrow-white.svg') !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 16px 16px !important;
+}
+
+.detail-cta .btn-default::after { display: none !important; }
+
+.detail-cta .btn-default:hover,
+.detail-cta .btn-default:focus-visible {
+    color: var(--accent-color) !important;
+    background: #fff !important;
+    transform: translateY(-2px);
+}
+
+@media (hover: none), (pointer: coarse) {
+    .catalog-section .service-item-btn .btn-default:hover,
+    .detail-cta .btn-default:hover { transform: none; }
+}
+
+@media (max-width: 575px) {
+    .catalog-section .service-item-btn .btn-default {
+        min-height: 44px;
+        padding: 13px 52px 13px 20px;
+        font-size: 14px;
+    }
+
+    .catalog-section .service-item-btn .btn-default::before {
+        width: 34px;
+        height: 34px;
+    }
+
+    .detail-cta {
+        gap: 20px;
+        border-radius: 20px;
+    }
+
+    .detail-cta h2 { font-size: clamp(24px, 7vw, 30px); }
+    .detail-cta .btn-default { width: 100%; }
+}
+
 @media (max-width: 991px) {
     .catalog-section { padding: 54px 0 76px; }
     .catalog-section > .container > .section-title {
@@ -5766,6 +5875,104 @@ a[href^="tel:"] { overflow-wrap: anywhere; }
 
     @supports (height: 100dvh) {
         .hero-silver.hero-interactive { height: 100dvh; }
+    }
+}
+
+/* Mobile navigation stays above page content and opens as a compact drawer. */
+@media (max-width: 1120px) {
+    header.main-header,
+    header.main-header .header-sticky {
+        overflow: visible;
+    }
+
+    header.main-header .responsive-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 110;
+        pointer-events: none;
+    }
+
+    header.main-header .slicknav_menu {
+        position: relative;
+        top: auto;
+        z-index: 110;
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+        pointer-events: auto;
+        background: linear-gradient(145deg, rgba(32, 62, 95, 0.985), rgba(77, 43, 140, 0.985));
+        box-shadow: 0 20px 42px rgba(8, 18, 42, 0.28);
+        -webkit-backdrop-filter: blur(16px);
+        backdrop-filter: blur(16px);
+    }
+
+    header.main-header .slicknav_nav {
+        max-height: calc(100dvh - 68px);
+        margin: 0;
+        padding: 10px 14px 16px;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    header.main-header .slicknav_nav > li > a,
+    header.main-header .slicknav_nav > li > .slicknav_row {
+        min-height: 45px;
+        display: flex;
+        align-items: center;
+        padding: 11px 14px;
+        color: #fff;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.11);
+    }
+
+    header.main-header .slicknav_nav > li:last-child > a { border-bottom: 0; }
+    header.main-header .slicknav_nav .slicknav_arrow::after { color: #fff; }
+
+    html.mobile-menu-open header.main-header .header-sticky,
+    html.mobile-menu-open header.main-header .header-sticky.hide,
+    html.mobile-menu-open header.main-header .header-sticky.active {
+        transform: translateY(0) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+    }
+
+    html.mobile-menu-open body { overflow: hidden; }
+}
+
+/* Phones use native scrolling and compositing-light effects to prevent jank. */
+@media (max-width: 767px), (hover: none), (pointer: coarse) {
+    html.mobile-motion-lite .wow,
+    html.mobile-motion-lite .reveal {
+        visibility: visible !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    html.mobile-motion-lite .has-section-handoff .section-handoff,
+    html.mobile-motion-lite .section-handoff {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .hero-ambient-grid,
+    .hero-ambient-orb,
+    .hero-interactive::after { animation: none !important; }
+
+    .hero-ambient-grid { display: none; }
+
+    :is(.main-header .header-sticky.active, .slicknav_menu, .hero-stats-line) {
+        -webkit-backdrop-filter: none !important;
+        backdrop-filter: none !important;
+    }
+
+    .hero-depth-layer,
+    .hero-interactive .hero-action-word,
+    .hero-interactive .hero-btn-silver,
+    .hero-interactive .hero-scroll-cue {
+        animation: none !important;
     }
 }
 
