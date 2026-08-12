@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
     "use strict";
 
     var DETAILS = {
@@ -39,7 +39,7 @@
             type: "Product",
             title: "FieldForce Automation",
             subtitle: "Spatially Enabled Field Workforce Management Platform",
-            intro: ["FieldForce Automation digitizes distributed field operations with GIS-enabled mobile workflows.", "Teams can assign tasks, track workforces, conduct inspections and surveys, manage complaints, and monitor service delivery in real time—even where offline data capture is required."],
+            intro: ["FieldForce Automation digitizes distributed field operations with GIS-enabled mobile workflows.", "Teams can assign tasks, track workforces, conduct inspections and surveys, manage complaints, and monitor service delivery in real time&mdash;even where offline data capture is required."],
             featureLabel: "Key Features",
             features: ["Service Request Management", "Work Order Management", "Field Inspection", "Geo-Tagged Data Collection", "GPS Workforce Tracking", "Attendance Management", "Route Optimization", "Customer Visit Tracking", "Offline Data Capture", "Photo & Document Upload", "Real-Time Dashboards", "Mobile Applications"],
             benefits: ["Improve field workforce productivity", "Reduce response time", "Enhance customer service", "Eliminate paper-based processes", "Enable real-time operational monitoring"],

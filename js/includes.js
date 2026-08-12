@@ -1,5 +1,5 @@
-/* =====================================================================
-   Adyapragnya Technologies — single-source header + footer
+﻿/* =====================================================================
+   Adyapragnya Technologies &mdash; single-source header + footer
    ---------------------------------------------------------------------
    This is the ONE place the header/nav/footer live. Every page drops in
    two placeholders and this script injects the shared markup:
@@ -27,9 +27,9 @@
                   '<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>' +
                   '<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>' +
                   '<li class="nav-item submenu"><a class="nav-link" href="products.html">Products</a>' +
-                    '<ul>' +
-                      '<li class="nav-item"><a class="nav-link" href="products.html">Our Products</a></li>' +
-                      '<li class="nav-item"><a class="nav-link" href="oem-products.html">OEM Products</a></li>' +
+                    '<ul class="products-menu-panel">' +
+                      '<li class="nav-item"><a class="nav-link" href="products.html"><span class="menu-title">Our Products</span><small class="menu-note">Purpose-built digital platforms</small><i class="fa-solid fa-arrow-right menu-arrow" aria-hidden="true"></i></a></li>' +
+                      '<li class="nav-item"><a class="nav-link" href="oem-products.html"><span class="menu-title">OEM Products</span><small class="menu-note">Global technology partnerships</small><i class="fa-solid fa-arrow-right menu-arrow" aria-hidden="true"></i></a></li>' +
                     '</ul>' +
                   '</li>' +
                   '<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>' +
@@ -47,12 +47,6 @@
                       '<div class="header-contact-box"><div class="icon-box"><img src="images/icon-phone-white.svg" alt=""></div><div class="header-contact-box-content"><h3>phone</h3><p><a href="tel:+918043702595">+91 80437 02595</a></p></div></div>' +
                       '<div class="header-contact-box"><div class="icon-box"><img src="images/icon-mail-white.svg" alt=""></div><div class="header-contact-box-content"><h3>email</h3><p><a href="mailto:sales@adyapragnya.com">sales@adyapragnya.com</a></p></div></div>' +
                       '<div class="header-contact-box"><div class="icon-box"><img src="images/icon-location-white.svg" alt=""></div><div class="header-contact-box-content"><h3>address</h3><p>956, Punam Mahal Rd, Subash Nagar, Kengeri Satellite Town, Bengaluru, Karnataka 560060, India</p></div></div>' +
-                      '<div class="header-social-links"><h2>stay connected</h2><ul>' +
-                        '<li><a href="https://www.linkedin.com/company/adyapragnya" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></li>' +
-                        '<li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>' +
-                        '<li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a></li>' +
-                        '<li><a href="https://youtube.com/@adyapragnyatechnologies" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>' +
-                      '</ul></div>' +
                     '</div>' +
                   '</div>' +
                 '</div>' +
@@ -75,7 +69,7 @@
               '<p>Stay informed with the latest in Geospatial Intelligence, Enterprise Software, AI, and Digital Transformation.</p>' +
               '<div class="footer-newsletter-form"><form action="#" method="POST"><div class="form-group">' +
                 '<input type="email" name="email" class="form-control" placeholder="Enter Email Address*" required>' +
-                '<button type="submit" class="newsletter-btn"><img src="images/arrow-primary.svg" alt=""></button>' +
+                '<button type="submit" class="newsletter-btn" aria-label="Subscribe"><img src="images/arrow-white.svg" alt=""></button>' +
               '</div></form></div>' +
             '</div>' +
           '</div>' +
@@ -97,7 +91,8 @@
                 '<li><a href="https://youtube.com/@adyapragnyatechnologies" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></li>' +
               '</ul></div>' +
             '</div>' +
-          '</div></div>' +
+          '</div>' +
+          '</div>' +
           '<div class="col-xl-8"><div class="footer-links-box">' +
             '<div class="footer-links"><h2>Company</h2><ul>' +
               '<li><a href="index.html">Home</a></li>' +
@@ -164,7 +159,7 @@
     }
 
     /* Visitor count.
-       The stored total lives in visitors.json ({"count": N}) — the single
+       The stored total lives in visitors.json ({"count": N}) &mdash; the single
        source of truth. A future Python backend will read + increment + write
        that file on each visit. Until then this script reads the JSON base and
        adds a per-session bump (kept in localStorage) so the number moves for
@@ -266,7 +261,7 @@
 })();
 
 /* =====================================================================
-   Client-side content deterrents — NOT real security.
+   Client-side content deterrents &mdash; NOT real security.
    Discourages casual right-click-save / copy / view-source. Trivially
    bypassed (disable JS, view-source:, curl, browser menu). Real content
    protection must live in the backend (auth, watermarking, DRM, ToS).
