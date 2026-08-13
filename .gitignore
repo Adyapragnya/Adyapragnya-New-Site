@@ -4,3 +4,6 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Large source assets (too big for GitHub's 100MB limit; ship the encoded MP4 instead)
+images/intro-bg.gif
