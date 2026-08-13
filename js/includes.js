@@ -113,10 +113,6 @@
               '<div class="footer-working-hour-box"><h2>Working Hours</h2><ul>' +
                 '<li><span>Monday - Friday</span><time>10:00 AM - 7:00 PM</time></li>' +
               '</ul></div>' +
-              '<div class="footer-visitor-count" aria-label="Website visitor count">' +
-                '<span class="footer-visitor-icon" aria-hidden="true"><i class="fa-solid fa-chart-line"></i></span>' +
-                '<span class="footer-visitor-copy"><span>Visitor Count</span><strong data-visitor-count>1</strong></span>' +
-              '</div>' +
             '</div>' +
             '<div class="footer-copyright-text"><p>Copyright &copy; <span data-current-year>2026</span> Adyapragnya Technologies Private Limited. All Rights Reserved.</p></div>' +
           '</div></div>' +
@@ -158,51 +154,30 @@
         if (el) el.textContent = new Date().getFullYear();
     }
 
-    /* Visitor count.
-       The stored total lives in visitors.json ({"count": N}) &mdash; the single
-       source of truth. A future Python backend will read + increment + write
-       that file on each visit. Until then this script reads the JSON base and
-       adds a per-session bump (kept in localStorage) so the number moves for
-       the visitor. When Python is live, delete the localStorage bump block
-       and just render data.count from the endpoint. */
-    function setVisitorCount() {
-        var deltaKey = "adyapragnya.visitor-delta.v1";
-        var sessionKey = "adyapragnya.visitor-counted.v1";
+    /* Google Analytics 4 &mdash; real, global traffic analytics.
+       This replaces the old homemade "visitor count" badge, which could only
+       ever show a per-browser localStorage number (not a true global count on
+       a static site).
 
-        function render(value) {
-            var safeValue = Math.max(1, parseInt(value, 10) || 1);
-            var counters = document.querySelectorAll("[data-visitor-count]");
-            for (var i = 0; i < counters.length; i++) {
-                counters[i].textContent = safeValue.toLocaleString("en-IN");
-            }
-        }
+       TO ACTIVATE: paste your GA4 Measurement ID below. Find it in Google
+       Analytics -> Admin -> Data streams -> your web stream -> "Measurement
+       ID" (looks like G-XXXXXXXXXX). Until a real ID is set, nothing loads. */
+    function loadAnalytics() {
+        var GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; // <-- replace with your GA4 ID
 
-        // Per-session local bump (placeholder until the Python backend writes
-        // visitors.json for real).
-        var delta = 0;
-        try {
-            delta = Math.max(0, parseInt(window.localStorage.getItem(deltaKey), 10) || 0);
-            if (window.sessionStorage.getItem(sessionKey) !== "1") {
-                delta += 1;
-                window.localStorage.setItem(deltaKey, String(delta));
-                window.sessionStorage.setItem(sessionKey, "1");
-            }
-        } catch (error) {
-            delta = 1;
-        }
+        if (!GA_MEASUREMENT_ID || GA_MEASUREMENT_ID === "G-XXXXXXXXXX") return;
+        if (!/^https?:$/.test(location.protocol)) return; // skip on file://
 
-        // Read the stored base count from the JSON file.
-        if (window.fetch && /^https?:$/.test(location.protocol)) {
-            window.fetch("visitors.json", { cache: "no-store" })
-                .then(function (res) { return res.ok ? res.json() : Promise.reject(); })
-                .then(function (data) {
-                    var base = (data && typeof data.count !== "undefined") ? parseInt(data.count, 10) || 0 : 0;
-                    render(base + delta);
-                })
-                .catch(function () { render(delta); });
-        } else {
-            render(delta);
-        }
+        var s = document.createElement("script");
+        s.async = true;
+        s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(GA_MEASUREMENT_ID);
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag("js", new Date());
+        gtag("config", GA_MEASUREMENT_ID);
     }
 
     function setBrandAssets() {
@@ -256,7 +231,7 @@
     setBrandAssets();
     markActiveNav();
     setYear();
-    setVisitorCount();
+    loadAnalytics();
     addBackToTop();
 })();
 
