@@ -115,7 +115,7 @@
               '</ul></div>' +
             '</div>' +
             '<div class="footer-copyright-text"><p>Copyright &copy; <span data-current-year>2026</span> Adyapragnya Technologies Private Limited. All Rights Reserved.</p>' +
-              '<p class="footer-image-credit">Satellite imagery courtesy of and &copy; Planet Labs PBC. Used with permission.</p></div>' +
+              '<p class="footer-image-credit">Satellite imagery &copy; Planet. Used with permission.</p></div>' +
           '</div></div>' +
         '</div>' +
       '</div>' +

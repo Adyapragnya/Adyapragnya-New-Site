@@ -139,20 +139,21 @@
 
     var OEMS = {
         "planet": {
-            title: "Planet Labs",
-            subtitle: "Daily Earth Observation & Satellite Intelligence",
+            title: "Planet",
+            subtitle: "The Entire Earth, Imaged Every Single Day",
             logo: "images/partner-planet.png",
             website: "https://www.planet.com",
             websiteLabel: "planet.com",
             headerBg: "images/sat-vinkeveen-netherlands.jpg",
             intro: [
-                "Planet Labs PBC operates the largest fleet of Earth-imaging satellites, capturing the entire landmass of the planet every single day. This unmatched cadence turns satellite imagery from an occasional snapshot into a continuous, reliable record of change.",
-                "As a Planet partner, Adyapragnya delivers this imagery, basemaps, and analytics-ready data directly into enterprise GIS, monitoring, and decision-support workflows &mdash; with local integration and support."
+                "Planet flies the largest constellation of Earth-imaging satellites ever built &mdash; scanning the entire landmass of the planet, every single day. What was once a rare, expensive snapshot is now a living, always-on record of how the world is changing: block by block, field by field, coastline by coastline.",
+                "That changes the question you can ask. Instead of &ldquo;what did this place look like last year?&rdquo; you can ask &ldquo;what changed here since yesterday?&rdquo; &mdash; and get an answer that is already in orbit, captured, calibrated, and ready to analyse. No waiting weeks for a cloud-free pass. No blind spots between site visits.",
+                "As Planet's partner in the region, Adyapragnya turns that firehose of imagery into decisions. We wire PlanetScope, SkySat and Tanager data straight into your GIS, dashboards and AI pipelines, and stand behind it with local licensing, onboarding, and support you can actually pick up the phone and reach."
             ],
             featureLabel: "Platforms & Products",
-            features: ["PlanetScope Daily Imagery", "SkySat High-Resolution Tasking", "Tanager Hyperspectral", "Planet Basemaps", "Planetary Variables", "Analysis-Ready Data", "Planet Insights Platform", "Automated Change Detection", "Forest Carbon Monitoring", "Roads & Buildings Feeds"],
-            benefits: ["Monitor any location with daily imaging cadence", "Detect change faster with consistent time-series", "Combine imagery, tasking, and analytics in one platform", "Reduce field visits through dependable remote monitoring", "Work with calibrated, analysis-ready data"],
-            ideal: ["Agriculture", "Forestry", "Government", "Defense & Intelligence", "Environmental Monitoring", "Insurance", "Infrastructure"],
+            features: ["PlanetScope — Daily Global Imagery", "SkySat — High-Resolution Tasking", "Tanager — Hyperspectral Intelligence", "Planet Basemaps", "Planetary Variables", "Analysis-Ready Data", "Planet Insights Platform", "Automated Change Detection", "Forest Carbon Monitoring", "Roads & Buildings Feeds"],
+            benefits: ["Watch any site on Earth change day by day &mdash; not quarter by quarter", "Catch problems early with a consistent, comparable time-series", "Task a fresh high-resolution image of a specific location on demand", "Retire costly, risky site visits with dependable remote monitoring", "Detect trace-gas and methane signatures invisible to standard imagery", "Feed clean, analysis-ready data straight into AI and GIS workflows"],
+            ideal: ["Agriculture", "Forestry & Carbon", "Government", "Defense & Intelligence", "Energy & Utilities", "Environmental Monitoring", "Insurance", "Infrastructure"],
             gallery: [
                 { base: "sat-tokyo-airport", caption: "Haneda Airport, Tokyo &mdash; PlanetScope quarterly mosaic (2025 Q3)" },
                 { base: "sat-vinkeveen-netherlands", caption: "Vinkeveen, Netherlands &mdash; super-resolution monthly visual (2025)" },
@@ -165,63 +166,63 @@
         },
         "greenhyla": {
             title: "GreenHyla",
-            subtitle: "Maritime Domain Intelligence Platform",
+            subtitle: "Know Where Every Vessel Is — In Real Time",
             logo: "images/partner-hyla.png",
             website: "https://www.greenhyla.com",
             websiteLabel: "greenhyla.com",
             intro: [
-                "GreenHyla is a maritime intelligence platform that brings live visibility to vessel activity, fleet operations, and port performance in a single operational picture.",
-                "Adyapragnya integrates GreenHyla's maritime data with enterprise GIS and analytics so operators, authorities, and logistics teams can plan voyages and manage risk with clearer, spatially grounded intelligence."
+                "The ocean is the world's busiest blind spot &mdash; thousands of vessels moving cargo, crews and risk across open water every hour. GreenHyla turns that chaos into a single, live operational picture: where every ship is, where it has been, and where it is headed.",
+                "Adyapragnya fuses GreenHyla's maritime feeds with your enterprise GIS and analytics, so operators, port authorities and logistics teams can plan voyages, flag anomalies and manage risk with intelligence grounded in real position &mdash; not guesswork."
             ],
             featureLabel: "Capabilities",
             features: ["Live Vessel Tracking", "AIS Data Integration", "Fleet Performance Analytics", "Port Activity Monitoring", "Voyage & Route Intelligence", "Maritime Risk Assessment", "Historical Track Analysis", "Zone & Geofence Alerts"],
-            benefits: ["Maintain live visibility across vessel activity", "Understand fleet and port performance", "Plan voyages with clearer risk intelligence", "Bring maritime data into your GIS", "Support faster operational decisions"],
+            benefits: ["See every vessel's live position, history and heading at a glance", "Get alerted the moment a ship enters a zone or behaves abnormally", "Benchmark fleet and port performance on real movement data", "Plan voyages and berths with clearer, evidence-based risk intelligence", "Bring maritime awareness straight into your GIS and dashboards"],
             ideal: ["Ports & Terminals", "Shipping & Logistics", "Maritime Authorities", "Coastal Surveillance", "Offshore Operations"]
         },
         "capknow": {
             title: "CAPKNOW",
-            subtitle: "GeoPMS &mdash; GIS-Based Project Monitoring System",
+            subtitle: "GeoPMS — See Your Whole Programme on One Live Map",
             logo: "images/partner-capknow.png",
             website: "https://capknow.com",
             websiteLabel: "capknow.com",
             intro: [
-                "CAPKNOW's GeoPMS is a GIS-based project monitoring system that unifies physical progress, financial status, and field evidence on one live, map-driven dashboard.",
-                "Adyapragnya implements GeoPMS for programmes and infrastructure portfolios, giving project teams and leadership decision-ready intelligence backed by geo-tagged, verifiable field data."
+                "On large programmes, the gap between the status report and the ground is where budgets quietly bleed. CAPKNOW's GeoPMS closes it &mdash; putting physical progress, financial status and geo-tagged field evidence on one live, map-driven dashboard that every stakeholder can trust.",
+                "Adyapragnya rolls out GeoPMS across programmes and infrastructure portfolios, so project teams see reality as it happens and leadership gets decision-ready intelligence backed by verifiable, location-stamped proof &mdash; not optimistic spreadsheets."
             ],
             featureLabel: "Capabilities",
             features: ["GIS Project Dashboards", "Geo-Tagged Progress Capture", "Milestone & Schedule Tracking", "Field Inspection Workflows", "Physical vs Financial Progress", "Photo & Document Evidence", "Executive MIS Reporting", "Multi-Project Portfolio View"],
-            benefits: ["See project health in one live dashboard", "Verify progress through geo-tagged inspections", "Give leaders decision-ready project intelligence", "Reduce reporting delays and disputes", "Track large project portfolios consistently"],
+            benefits: ["See true project health &mdash; physical and financial &mdash; in one live view", "Verify progress with geo-tagged, photo-backed field inspections", "Replace disputed status meetings with evidence everyone can see", "Give leadership decision-ready intelligence, not stale spreadsheets", "Govern dozens of projects with one consistent, auditable system"],
             ideal: ["Government Programmes", "Infrastructure", "Urban Development", "Utilities", "EPC & Construction"]
         },
         "hexagon": {
             title: "Hexagon Geospatial",
-            subtitle: "Enterprise Geospatial & Remote Sensing Technology",
+            subtitle: "The Engine Behind Enterprise-Grade Geospatial",
             logo: "images/partner-hexagon.png",
             website: "https://hexagon.com",
             websiteLabel: "hexagon.com",
             headerBg: "images/sat-skye-scotland.jpg",
             intro: [
-                "Hexagon's geospatial portfolio powers some of the world's most demanding remote sensing, photogrammetry, and enterprise mapping workflows &mdash; from raw imagery processing to advanced visualization and delivery.",
-                "Adyapragnya deploys and integrates the Hexagon stack, connecting best-in-class geospatial software to your operations with implementation, training, and long-term support."
+                "When the imagery is massive and the accuracy is non-negotiable, Hexagon is the engine behind the map. Its geospatial portfolio powers some of the most demanding remote sensing, photogrammetry and enterprise mapping workflows on earth &mdash; from raw pixels to polished, decision-grade products.",
+                "Adyapragnya deploys, integrates and tunes the full Hexagon stack around the way your teams actually work &mdash; backed by implementation, training and long-term support, so world-class software becomes everyday capability."
             ],
             featureLabel: "Products",
             features: ["ERDAS IMAGINE", "GeoMedia", "Luciad Portfolio", "M.App Enterprise", "GeoMedia Smart Client", "ERDAS Apollo", "Photogrammetry Suite", "Spatial Modeler"],
-            benefits: ["Analyze imagery with ERDAS IMAGINE & GeoMedia", "Build advanced experiences with Luciad & M.App", "Streamline geospatial delivery with Apollo", "Automate raster and remote-sensing workflows", "Scale enterprise geospatial delivery"],
+            benefits: ["Process and analyse huge imagery volumes with ERDAS IMAGINE", "Build precise enterprise maps and models in GeoMedia", "Deliver fast, rich geospatial experiences with the Luciad portfolio", "Automate repetitive raster and remote-sensing workflows", "Publish and serve geospatial data at scale with ERDAS Apollo"],
             ideal: ["Government", "Defense & Intelligence", "Utilities", "Mapping Agencies", "Environment", "Infrastructure"]
         },
         "foreintel": {
             title: "Foreintel Solutions",
-            subtitle: "Professional Drone & UAV Solutions",
+            subtitle: "Survey the Unreachable — From the Air",
             logo: "images/partner-foreintel.png",
             website: "https://www.foreintel.tech",
             websiteLabel: "foreintel.tech",
             intro: [
-                "Foreintel Solutions provides professional-grade drone and UAV platforms engineered for survey, mapping, inspection, and monitoring missions across demanding environments.",
-                "Adyapragnya matches the right platform and payload to your accuracy, terrain, and coverage requirements &mdash; then supports data capture and geospatial processing end-to-end."
+                "Some sites are too large, too steep or too dangerous to survey on foot &mdash; and that is exactly where drones earn their keep. Foreintel builds professional-grade UAV platforms engineered for survey, mapping, inspection and monitoring in the environments that defeat conventional methods.",
+                "Adyapragnya matches the right airframe and payload to your accuracy, terrain and coverage, then carries the mission through end to end &mdash; from flight planning and capture to survey-grade, GIS-ready deliverables."
             ],
             featureLabel: "Platforms & Payloads",
             features: ["Fixed-Wing UAVs", "Multirotor Platforms", "VTOL Systems", "Survey & Mapping Payloads", "Thermal & Multispectral Sensors", "LiDAR Payloads", "Ground Control Stations", "Mission Planning Software"],
-            benefits: ["Match survey and mapping needs with the right UAV", "Choose fixed-wing, multirotor or VTOL platforms", "Extend missions with thermal and specialist payloads", "Capture large areas efficiently and safely", "Deliver survey-grade, GIS-ready outputs"],
+            benefits: ["Cover large or hazardous sites in a fraction of the time and risk", "Pick the ideal fixed-wing, multirotor or VTOL platform per mission", "Add thermal, multispectral or LiDAR payloads for specialist surveys", "Capture repeatable, centimetre-grade data on demand", "Turn flights into survey-grade, GIS-ready deliverables"],
             ideal: ["Survey & Mapping", "Mining", "Infrastructure", "Agriculture", "Renewable Energy", "Disaster Response"]
         }
     };
@@ -243,7 +244,7 @@
         if (oem.gallery && oem.gallery.length) {
             galleryHtml =
                 '<div class="detail-block">' +
-                    '<div class="detail-block-heading"><h2>Imagery Gallery</h2><p>Real Earth observation captured by Planet Labs PBC. Click any frame to enlarge.</p></div>' +
+                    '<div class="detail-block-heading"><h2>Imagery Gallery</h2><p>Real Earth observation captured by Planet. Click any frame to enlarge.</p></div>' +
                     '<div class="oem-gallery">' +
                     list(oem.gallery, function (shot, i) {
                         return '<a class="oem-gallery-item" href="images/' + shot.base + '.jpg" data-index="' + i + '">' +
@@ -253,7 +254,7 @@
                                 '</a>';
                     }) +
                     '</div>' +
-                    '<p class="oem-gallery-credit">Imagery &copy; Planet Labs PBC</p>' +
+                    '<p class="oem-gallery-credit">Imagery &copy; Planet</p>' +
                 '</div>';
         }
 
@@ -319,7 +320,7 @@
                 '<figcaption class="oem-lightbox-caption"></figcaption>' +
             '</figure>' +
             '<div class="oem-lightbox-counter"></div>' +
-            '<div class="oem-lightbox-credit">Imagery &copy; Planet Labs PBC</div>';
+            '<div class="oem-lightbox-credit">Imagery &copy; Planet</div>';
         document.body.appendChild(overlay);
 
         var imgEl = overlay.querySelector(".oem-lightbox-img");
