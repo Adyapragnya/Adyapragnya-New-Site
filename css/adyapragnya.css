@@ -6387,3 +6387,11 @@ img {
     user-drag: none;
     -webkit-touch-callout: none;
 }
+
+/* Fix: footer link hover was dark accent on the dark footer (unreadable).
+   Use a light-accent tint that stays legible on the navy footer. */
+.main-footer .footer-links ul li a:hover,
+.main-footer .footer-links-box ul li a:hover,
+.main-footer .footer-contact-list ul li a:hover {
+    color: #b9a6e6;
+}

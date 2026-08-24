@@ -748,15 +748,15 @@
 		var portfolioSwiper = new Swiper(carousel, {
 			slidesPerView: 1,
 			spaceBetween: 16,
-			speed: reduceMotion ? 1 : 5200,
-			loop: true,
-			loopAdditionalSlides: 2,
-			rewind: false,
+			speed: reduceMotion ? 1 : 650,
+			initialSlide: 0,
+			loop: false,
+			rewind: true,
 			centeredSlides: false,
 			grabCursor: true,
 			autoHeight: false,
 			autoplay: reduceMotion ? false : {
-				delay: 0,
+				delay: 3200,
 				disableOnInteraction: false,
 				pauseOnMouseEnter: true
 			},
