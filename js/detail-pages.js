@@ -137,6 +137,95 @@
         }
     };
 
+    var OEMS = {
+        "planet": {
+            title: "Planet Labs",
+            subtitle: "Daily Earth Observation & Satellite Intelligence",
+            logo: "images/partner-planet.png",
+            website: "https://www.planet.com",
+            websiteLabel: "planet.com",
+            headerBg: "images/sat-vinkeveen-netherlands.jpg",
+            intro: [
+                "Planet Labs PBC operates the largest fleet of Earth-imaging satellites, capturing the entire landmass of the planet every single day. This unmatched cadence turns satellite imagery from an occasional snapshot into a continuous, reliable record of change.",
+                "As a Planet partner, Adyapragnya delivers this imagery, basemaps, and analytics-ready data directly into enterprise GIS, monitoring, and decision-support workflows &mdash; with local integration and support."
+            ],
+            featureLabel: "Platforms & Products",
+            features: ["PlanetScope Daily Imagery", "SkySat High-Resolution Tasking", "Tanager Hyperspectral", "Planet Basemaps", "Planetary Variables", "Analysis-Ready Data", "Planet Insights Platform", "Automated Change Detection", "Forest Carbon Monitoring", "Roads & Buildings Feeds"],
+            benefits: ["Monitor any location with daily imaging cadence", "Detect change faster with consistent time-series", "Combine imagery, tasking, and analytics in one platform", "Reduce field visits through dependable remote monitoring", "Work with calibrated, analysis-ready data"],
+            ideal: ["Agriculture", "Forestry", "Government", "Defense & Intelligence", "Environmental Monitoring", "Insurance", "Infrastructure"],
+            gallery: [
+                { base: "sat-tokyo-airport", caption: "Haneda Airport, Tokyo &mdash; PlanetScope quarterly mosaic (2025 Q3)" },
+                { base: "sat-vinkeveen-netherlands", caption: "Vinkeveen, Netherlands &mdash; super-resolution monthly visual (2025)" },
+                { base: "sat-longtian-china", caption: "Longtian Airbase, China &mdash; SkySat high-resolution tasking" },
+                { base: "sat-muhazi-rwanda", caption: "Lake Muhazi, Rwanda &mdash; PlanetScope quarterly mosaic (2024 Q2)" },
+                { base: "sat-skye-scotland", caption: "Isle of Skye, Scotland &mdash; global monthly mosaic (2025-05)" },
+                { base: "sat-methane-sandiego", caption: "San Diego County, California &mdash; Tanager methane plume detection" },
+                { base: "sat-methane-kootenay", caption: "East Kootenay, BC, Canada &mdash; Tanager methane plume detection" }
+            ]
+        },
+        "greenhyla": {
+            title: "GreenHyla",
+            subtitle: "Maritime Domain Intelligence Platform",
+            logo: "images/partner-hyla.png",
+            website: "https://www.greenhyla.com",
+            websiteLabel: "greenhyla.com",
+            intro: [
+                "GreenHyla is a maritime intelligence platform that brings live visibility to vessel activity, fleet operations, and port performance in a single operational picture.",
+                "Adyapragnya integrates GreenHyla's maritime data with enterprise GIS and analytics so operators, authorities, and logistics teams can plan voyages and manage risk with clearer, spatially grounded intelligence."
+            ],
+            featureLabel: "Capabilities",
+            features: ["Live Vessel Tracking", "AIS Data Integration", "Fleet Performance Analytics", "Port Activity Monitoring", "Voyage & Route Intelligence", "Maritime Risk Assessment", "Historical Track Analysis", "Zone & Geofence Alerts"],
+            benefits: ["Maintain live visibility across vessel activity", "Understand fleet and port performance", "Plan voyages with clearer risk intelligence", "Bring maritime data into your GIS", "Support faster operational decisions"],
+            ideal: ["Ports & Terminals", "Shipping & Logistics", "Maritime Authorities", "Coastal Surveillance", "Offshore Operations"]
+        },
+        "capknow": {
+            title: "CAPKNOW",
+            subtitle: "GeoPMS &mdash; GIS-Based Project Monitoring System",
+            logo: "images/partner-capknow.png",
+            website: "https://capknow.com",
+            websiteLabel: "capknow.com",
+            intro: [
+                "CAPKNOW's GeoPMS is a GIS-based project monitoring system that unifies physical progress, financial status, and field evidence on one live, map-driven dashboard.",
+                "Adyapragnya implements GeoPMS for programmes and infrastructure portfolios, giving project teams and leadership decision-ready intelligence backed by geo-tagged, verifiable field data."
+            ],
+            featureLabel: "Capabilities",
+            features: ["GIS Project Dashboards", "Geo-Tagged Progress Capture", "Milestone & Schedule Tracking", "Field Inspection Workflows", "Physical vs Financial Progress", "Photo & Document Evidence", "Executive MIS Reporting", "Multi-Project Portfolio View"],
+            benefits: ["See project health in one live dashboard", "Verify progress through geo-tagged inspections", "Give leaders decision-ready project intelligence", "Reduce reporting delays and disputes", "Track large project portfolios consistently"],
+            ideal: ["Government Programmes", "Infrastructure", "Urban Development", "Utilities", "EPC & Construction"]
+        },
+        "hexagon": {
+            title: "Hexagon Geospatial",
+            subtitle: "Enterprise Geospatial & Remote Sensing Technology",
+            logo: "images/partner-hexagon.png",
+            website: "https://hexagon.com",
+            websiteLabel: "hexagon.com",
+            headerBg: "images/sat-skye-scotland.jpg",
+            intro: [
+                "Hexagon's geospatial portfolio powers some of the world's most demanding remote sensing, photogrammetry, and enterprise mapping workflows &mdash; from raw imagery processing to advanced visualization and delivery.",
+                "Adyapragnya deploys and integrates the Hexagon stack, connecting best-in-class geospatial software to your operations with implementation, training, and long-term support."
+            ],
+            featureLabel: "Products",
+            features: ["ERDAS IMAGINE", "GeoMedia", "Luciad Portfolio", "M.App Enterprise", "GeoMedia Smart Client", "ERDAS Apollo", "Photogrammetry Suite", "Spatial Modeler"],
+            benefits: ["Analyze imagery with ERDAS IMAGINE & GeoMedia", "Build advanced experiences with Luciad & M.App", "Streamline geospatial delivery with Apollo", "Automate raster and remote-sensing workflows", "Scale enterprise geospatial delivery"],
+            ideal: ["Government", "Defense & Intelligence", "Utilities", "Mapping Agencies", "Environment", "Infrastructure"]
+        },
+        "foreintel": {
+            title: "Foreintel Solutions",
+            subtitle: "Professional Drone & UAV Solutions",
+            logo: "images/partner-foreintel.png",
+            website: "https://www.foreintel.tech",
+            websiteLabel: "foreintel.tech",
+            intro: [
+                "Foreintel Solutions provides professional-grade drone and UAV platforms engineered for survey, mapping, inspection, and monitoring missions across demanding environments.",
+                "Adyapragnya matches the right platform and payload to your accuracy, terrain, and coverage requirements &mdash; then supports data capture and geospatial processing end-to-end."
+            ],
+            featureLabel: "Platforms & Payloads",
+            features: ["Fixed-Wing UAVs", "Multirotor Platforms", "VTOL Systems", "Survey & Mapping Payloads", "Thermal & Multispectral Sensors", "LiDAR Payloads", "Ground Control Stations", "Mission Planning Software"],
+            benefits: ["Match survey and mapping needs with the right UAV", "Choose fixed-wing, multirotor or VTOL platforms", "Extend missions with thermal and specialist payloads", "Capture large areas efficiently and safely", "Deliver survey-grade, GIS-ready outputs"],
+            ideal: ["Survey & Mapping", "Mining", "Infrastructure", "Agriculture", "Renewable Energy", "Disaster Response"]
+        }
+    };
+
     function escapeHtml(value) {
         return String(value).replace(/[&<>"']/g, function (character) {
             return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[character];
@@ -147,11 +236,149 @@
         return items.map(renderer).join("");
     }
 
+    function renderOem(mount, oem) {
+        var bgUrl = oem.headerBg || "images/oem-product-bg.webp";
+
+        var galleryHtml = "";
+        if (oem.gallery && oem.gallery.length) {
+            galleryHtml =
+                '<div class="detail-block">' +
+                    '<div class="detail-block-heading"><h2>Imagery Gallery</h2><p>Real Earth observation captured by Planet Labs PBC. Click any frame to enlarge.</p></div>' +
+                    '<div class="oem-gallery">' +
+                    list(oem.gallery, function (shot, i) {
+                        return '<a class="oem-gallery-item" href="images/' + shot.base + '.jpg" data-index="' + i + '">' +
+                                    '<img loading="lazy" src="images/' + shot.base + '-thumb.jpg" alt="' + escapeHtml(shot.caption.replace(/&mdash;/g, "-")) + '">' +
+                                    '<span class="oem-gallery-caption">' + shot.caption + '</span>' +
+                                    '<span class="oem-gallery-zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>' +
+                                '</a>';
+                    }) +
+                    '</div>' +
+                    '<p class="oem-gallery-credit">Imagery &copy; Planet Labs PBC</p>' +
+                '</div>';
+        }
+
+        mount.innerHTML =
+            '<div class="page-header dark-section oem-detail-header parallaxie" style="background-image: url(\'' + bgUrl + '\');">' +
+                '<div class="container"><div class="row"><div class="col-lg-12"><div class="page-header-box">' +
+                    '<h1>' + escapeHtml(oem.title) + '</h1>' +
+                    '<nav><ol class="breadcrumb">' +
+                        '<li class="breadcrumb-item"><a href="index.html">Home</a></li>' +
+                        '<li class="breadcrumb-item"><a href="oem-products.html">OEM Products</a></li>' +
+                        '<li class="breadcrumb-item active" aria-current="page">' + escapeHtml(oem.title) + '</li>' +
+                    '</ol></nav>' +
+                '</div></div></div></div>' +
+            '</div>' +
+            '<section class="detail-overview-section">' +
+                '<div class="container"><div class="row">' +
+                    '<div class="col-lg-4"><aside class="detail-sidebar oem-detail-sidebar">' +
+                        '<div class="oem-detail-logo"><img src="' + oem.logo + '" alt="' + escapeHtml(oem.title) + ' logo"></div>' +
+                        '<span class="detail-type">OEM Partner</span>' +
+                        '<h2>' + escapeHtml(oem.title) + '</h2>' +
+                        '<p>' + oem.subtitle + '</p>' +
+                        '<div class="detail-sidebar-actions">' +
+                            '<a href="contact.html" class="btn-default btn-highlighted">Enquire Now</a>' +
+                            '<a href="' + oem.website + '" target="_blank" rel="noopener" class="oem-website-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit ' + escapeHtml(oem.websiteLabel) + '</a>' +
+                            '<a class="detail-back-link" href="oem-products.html"><i class="fa-solid fa-arrow-left"></i> Back to OEM Products</a>' +
+                        '</div>' +
+                    '</aside></div>' +
+                    '<div class="col-lg-8"><div class="detail-main">' +
+                        '<div class="section-title"><span class="section-sub-title">Overview</span><h2>' + oem.subtitle + '</h2></div>' +
+                        '<div class="detail-copy">' + list(oem.intro, function (p) { return '<p>' + p + '</p>'; }) + '</div>' +
+                        galleryHtml +
+                        '<div class="detail-block"><div class="detail-block-heading"><h2>' + escapeHtml(oem.featureLabel) + '</h2><p>Delivered, integrated, and supported by Adyapragnya.</p></div>' +
+                            '<div class="detail-feature-grid">' + list(oem.features, function (f) { return '<div class="detail-feature-item"><i class="fa-solid fa-check-double"></i><span>' + escapeHtml(f) + '</span></div>'; }) + '</div>' +
+                        '</div>' +
+                        '<div class="detail-block detail-benefit-panel"><h2>What You Gain</h2><ul class="detail-benefit-list">' +
+                            list(oem.benefits, function (b) { return '<li>' + b + '</li>'; }) +
+                        '</ul></div>' +
+                        '<div class="detail-block"><div class="detail-block-heading"><h2>Ideal For</h2><p>Trusted across sectors that depend on reliable geospatial intelligence.</p></div><div class="detail-audience">' +
+                            list(oem.ideal, function (a) { return '<span>' + escapeHtml(a) + '</span>'; }) +
+                        '</div></div>' +
+                        '<div class="detail-cta"><div><h2>Interested in ' + escapeHtml(oem.title) + '?</h2><p>Tell us your requirement and we will map the right licensing and implementation path.</p></div><a href="contact.html" class="btn-default">Get In Touch</a></div>' +
+                    '</div></div>' +
+                '</div></div>' +
+            '</section>';
+
+        if (oem.gallery && oem.gallery.length) {
+            setupOemLightbox(oem.gallery);
+        }
+    }
+
+    function setupOemLightbox(gallery) {
+        var current = 0;
+
+        var overlay = document.createElement("div");
+        overlay.className = "oem-lightbox";
+        overlay.setAttribute("aria-hidden", "true");
+        overlay.innerHTML =
+            '<button class="oem-lightbox-close" type="button" aria-label="Close">&times;</button>' +
+            '<button class="oem-lightbox-nav oem-lightbox-prev" type="button" aria-label="Previous image"><i class="fa-solid fa-chevron-left"></i></button>' +
+            '<button class="oem-lightbox-nav oem-lightbox-next" type="button" aria-label="Next image"><i class="fa-solid fa-chevron-right"></i></button>' +
+            '<figure class="oem-lightbox-figure">' +
+                '<img class="oem-lightbox-img" src="" alt="">' +
+                '<figcaption class="oem-lightbox-caption"></figcaption>' +
+            '</figure>' +
+            '<div class="oem-lightbox-counter"></div>' +
+            '<div class="oem-lightbox-credit">Imagery &copy; Planet Labs PBC</div>';
+        document.body.appendChild(overlay);
+
+        var imgEl = overlay.querySelector(".oem-lightbox-img");
+        var capEl = overlay.querySelector(".oem-lightbox-caption");
+        var countEl = overlay.querySelector(".oem-lightbox-counter");
+
+        function show(index) {
+            current = (index + gallery.length) % gallery.length;
+            var shot = gallery[current];
+            imgEl.src = "images/" + shot.base + ".jpg";
+            imgEl.alt = shot.caption.replace(/&mdash;/g, "-");
+            capEl.innerHTML = shot.caption;
+            countEl.textContent = (current + 1) + " / " + gallery.length;
+        }
+        function open(index) {
+            show(index);
+            overlay.classList.add("is-open");
+            overlay.setAttribute("aria-hidden", "false");
+            document.body.style.overflow = "hidden";
+        }
+        function close() {
+            overlay.classList.remove("is-open");
+            overlay.setAttribute("aria-hidden", "true");
+            document.body.style.overflow = "";
+        }
+
+        var items = document.querySelectorAll(".oem-gallery-item");
+        for (var i = 0; i < items.length; i++) {
+            (function (el) {
+                el.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    open(parseInt(el.getAttribute("data-index"), 10) || 0);
+                });
+            })(items[i]);
+        }
+
+        overlay.querySelector(".oem-lightbox-close").addEventListener("click", close);
+        overlay.querySelector(".oem-lightbox-prev").addEventListener("click", function () { show(current - 1); });
+        overlay.querySelector(".oem-lightbox-next").addEventListener("click", function () { show(current + 1); });
+        overlay.addEventListener("click", function (e) { if (e.target === overlay) close(); });
+        document.addEventListener("keydown", function (e) {
+            if (!overlay.classList.contains("is-open")) return;
+            if (e.key === "Escape") close();
+            else if (e.key === "ArrowLeft") show(current - 1);
+            else if (e.key === "ArrowRight") show(current + 1);
+        });
+    }
+
     function render() {
         var mount = document.getElementById("detail-page");
         if (!mount) return;
 
         var id = mount.getAttribute("data-detail-id");
+
+        if (OEMS[id]) {
+            renderOem(mount, OEMS[id]);
+            return;
+        }
+
         var detail = DETAILS[id];
         if (!detail) {
             mount.innerHTML = '<div class="container" style="padding:120px 0"><h1>Page not found</h1><p><a href="index.html">Return home</a></p></div>';

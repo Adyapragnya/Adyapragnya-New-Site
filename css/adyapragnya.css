@@ -1483,7 +1483,7 @@ header.main-header .main-menu ul li a.active { color: var(--accent-color); }
 /* Restore the dedicated CTA artwork; the generic dark-section rule above
    should only replace the old theme texture, not section-specific imagery. */
 .our-donation-silver.dark-section {
-    background-image: url('../images/request-demo-bg.png');
+    background-image: url('../images/sat-longtian-china.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -6144,4 +6144,246 @@ a[href^="tel:"] { overflow-wrap: anywhere; }
 .detail-benefit-list li::before {
     color: #fff !important;
     background: var(--violet-gradient) !important;
+}
+
+/* ===== OEM Partner Detail Pages ===== */
+.oem-detail-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 118px;
+    margin-bottom: 22px;
+    padding: 26px 24px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 14px 34px rgba(7, 20, 42, 0.18);
+}
+.oem-detail-logo img {
+    max-width: 100%;
+    max-height: 76px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+.oem-website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    justify-content: center;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    color: var(--white-color);
+    font-weight: 600;
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
+.oem-website-link:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: var(--white-color);
+}
+
+.oem-detail-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(15, 26, 48, 0.55) 0%, rgba(15, 26, 48, 0.72) 100%);
+}
+.oem-detail-header .container { position: relative; z-index: 2; }
+
+.oem-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+.oem-gallery-item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(7, 20, 42, 0.14);
+    aspect-ratio: 16 / 9;
+    background: #0f1a30;
+}
+.oem-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+.oem-gallery-item:hover img { transform: scale(1.06); }
+.oem-gallery-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 26px 14px 12px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    color: #fff;
+    background: linear-gradient(180deg, rgba(10, 18, 34, 0) 0%, rgba(10, 18, 34, 0.85) 100%);
+}
+.oem-gallery-credit {
+    margin-top: 12px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+@media (max-width: 767px) {
+    .oem-gallery { grid-template-columns: 1fr; gap: 14px; }
+    .oem-detail-logo { min-height: 96px; padding: 22px; }
+    .oem-detail-logo img { max-height: 60px; }
+}
+
+/* Footer satellite imagery attribution */
+.footer-image-credit {
+    margin-top: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    opacity: 0.6;
+}
+
+/* OEM gallery zoom hint */
+.oem-gallery-item { cursor: pointer; }
+.oem-gallery-zoom {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: rgba(10, 18, 34, 0.55);
+    color: #fff;
+    font-size: 13px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+.oem-gallery-item:hover .oem-gallery-zoom { opacity: 1; transform: translateY(0); }
+
+/* OEM lightbox slideshow */
+.oem-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 4vh 5vw;
+    background: rgba(6, 12, 24, 0.92);
+    backdrop-filter: blur(4px);
+}
+.oem-lightbox.is-open { display: flex; }
+.oem-lightbox-figure {
+    margin: 0;
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.oem-lightbox-img {
+    max-width: 100%;
+    max-height: 82vh;
+    width: auto;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+    object-fit: contain;
+}
+.oem-lightbox-caption {
+    margin-top: 16px;
+    max-width: 780px;
+    text-align: center;
+    color: #f4f7fb;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.oem-lightbox-counter {
+    position: absolute;
+    top: 22px;
+    left: 24px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+}
+.oem-lightbox-credit {
+    position: absolute;
+    bottom: 18px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.oem-lightbox-close {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+}
+.oem-lightbox-close:hover { opacity: 1; }
+.oem-lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 52px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.2s ease, border-color 0.2s ease;
+}
+.oem-lightbox-nav:hover { background: rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.6); }
+.oem-lightbox-prev { left: 3vw; }
+.oem-lightbox-next { right: 3vw; }
+@media (max-width: 767px) {
+    .oem-lightbox-nav { width: 42px; height: 42px; font-size: 15px; }
+    .oem-lightbox-prev { left: 8px; }
+    .oem-lightbox-next { right: 8px; }
+    .oem-lightbox-img { max-height: 68vh; }
+    .oem-lightbox-caption { font-size: 13.5px; }
+}
+
+/* ===== Site-wide content deterrents (casual copy/save prevention) ===== */
+/* NOTE: a deterrent only — cannot stop a determined user. */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Keep form fields fully usable */
+input, textarea, select, [contenteditable="true"] {
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
 }

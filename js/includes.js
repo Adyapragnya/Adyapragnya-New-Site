@@ -114,7 +114,8 @@
                 '<li><span>Monday - Friday</span><time>10:00 AM - 7:00 PM</time></li>' +
               '</ul></div>' +
             '</div>' +
-            '<div class="footer-copyright-text"><p>Copyright &copy; <span data-current-year>2026</span> Adyapragnya Technologies Private Limited. All Rights Reserved.</p></div>' +
+            '<div class="footer-copyright-text"><p>Copyright &copy; <span data-current-year>2026</span> Adyapragnya Technologies Private Limited. All Rights Reserved.</p>' +
+              '<p class="footer-image-credit">Satellite imagery courtesy of and &copy; Planet Labs PBC. Used with permission.</p></div>' +
           '</div></div>' +
         '</div>' +
       '</div>' +
@@ -243,16 +244,40 @@
    ===================================================================== */
 (function () {
     "use strict";
-    document.addEventListener("contextmenu", function (e) { e.preventDefault(); });
-    document.addEventListener("dragstart", function (e) {
-        if (e.target && (e.target.tagName === "IMG" || e.target.tagName === "A")) e.preventDefault();
+
+    // Form fields must stay fully usable (typing, selecting, paste into the
+    // contact form). Only the rest of the page is locked down.
+    function isFormField(node) {
+        while (node && node !== document) {
+            if (node.nodeType === 1) {
+                var tag = node.tagName;
+                if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT" || node.isContentEditable) return true;
+            }
+            node = node.parentNode;
+        }
+        return false;
+    }
+
+    document.addEventListener("contextmenu", function (e) {
+        if (!isFormField(e.target)) e.preventDefault();
+    });
+    document.addEventListener("dragstart", function (e) { e.preventDefault(); });
+    document.addEventListener("selectstart", function (e) {
+        if (!isFormField(e.target)) e.preventDefault();
+    });
+    ["copy", "cut"].forEach(function (evt) {
+        document.addEventListener(evt, function (e) {
+            if (!isFormField(e.target)) e.preventDefault();
+        });
     });
     document.addEventListener("keydown", function (e) {
         var k = (e.key || "").toLowerCase();
+        var inField = isFormField(e.target);
         var block =
             e.key === "F12" ||
             (e.ctrlKey && (k === "u" || k === "s" || k === "p")) ||
-            (e.ctrlKey && e.shiftKey && (k === "i" || k === "j" || k === "c"));
+            (e.ctrlKey && e.shiftKey && (k === "i" || k === "j" || k === "c")) ||
+            (e.ctrlKey && !inField && (k === "c" || k === "x" || k === "a"));
         if (block) { e.preventDefault(); return false; }
     });
 })();
