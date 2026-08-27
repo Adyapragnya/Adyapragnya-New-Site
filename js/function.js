@@ -739,13 +739,13 @@
 		});
 	})();
 
-	/* OEM portfolio: calm autoplay, drag/swipe, and pause on interaction. */
+	/* OEM portfolio: user-controlled navigation only. */
 	(function initOemPortfolioCarousel(){
 		var carousel = document.querySelector('.oem-portfolio-swiper');
 		if (!carousel || typeof Swiper === 'undefined') return;
 		var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-		var portfolioSwiper = new Swiper(carousel, {
+		new Swiper(carousel, {
 			slidesPerView: 1,
 			spaceBetween: 16,
 			speed: reduceMotion ? 1 : 650,
@@ -755,11 +755,7 @@
 			centeredSlides: false,
 			grabCursor: true,
 			autoHeight: false,
-			autoplay: reduceMotion ? false : {
-				delay: 3200,
-				disableOnInteraction: false,
-				pauseOnMouseEnter: true
-			},
+			autoplay: false,
 			pagination: {
 				el: '.oem-carousel-pagination',
 				clickable: true
@@ -778,16 +774,6 @@
 				1500: { slidesPerView: 4, spaceBetween: 28 }
 			}
 		});
-
-		if (!reduceMotion && 'IntersectionObserver' in window) {
-			var autoplayObserver = new IntersectionObserver(function(entries){
-				entries.forEach(function(entry){
-					if (entry.isIntersecting) portfolioSwiper.autoplay.start();
-					else portfolioSwiper.autoplay.stop();
-				});
-			}, { threshold: 0.05 });
-			autoplayObserver.observe(carousel);
-		}
 	})();
 
 	/* OEM banner physics: drop, collide, drag and release every object. */
