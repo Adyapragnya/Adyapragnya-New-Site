@@ -97,7 +97,7 @@
         },
         "remote-sensing": {
             type: "Service",
-            title: "Remote Sensing & Satellite Analytics",
+            title: "Remote Sensing & Analytics",
             subtitle: "Turn Earth Observation Data into Actionable Intelligence",
             intro: ["We process and analyze satellite imagery to reveal land, water, vegetation, infrastructure, and environmental change over time.", "Our workflows combine geospatial science, multi-temporal analysis, and AI-based interpretation for dependable monitoring at scale."],
             featureLabel: "Service Capabilities",
