@@ -17,9 +17,9 @@
         },
         "assettrax": {
             type: "Product",
-            title: "AssetTrax",
+            title: "Adyapragnya Asset Management System",
             subtitle: "Utility Asset Maintenance Management System",
-            intro: ["AssetTrax manages critical infrastructure and utility assets throughout their lifecycle. GIS-based visualization connects each asset's location with its condition, performance, maintenance history, and operational workflows.", "The platform supports proactive planning, minimizes downtime, extends asset life, and improves service reliability."],
+            intro: ["Adyapragnya Asset Management System manages critical infrastructure and utility assets throughout their lifecycle. GIS-based visualization connects each asset's location with its condition, performance, maintenance history, and operational workflows.", "The platform supports proactive planning, minimizes downtime, extends asset life, and improves service reliability."],
             featureLabel: "Key Features",
             features: ["Centralized Asset Registry", "GIS-Based Asset Visualization", "Preventive & Corrective Maintenance", "Work Order Management", "Inspection Management", "Asset Health Monitoring", "Inventory & Spare Parts", "Mobile Workforce Integration", "Maintenance Scheduling", "AMC & Warranty Tracking", "Performance Dashboards", "Reports & Analytics"],
             benefits: ["Maximize asset performance and lifespan", "Reduce maintenance costs", "Improve workforce productivity", "Minimize service disruptions", "Enable data-driven maintenance planning"],
@@ -27,9 +27,9 @@
         },
         "asstrax": {
             type: "Product",
-            title: "Asstrax",
+            title: "Adyapragnya Land Asset Management System",
             subtitle: "Enterprise Land Asset Management System",
-            intro: ["Asstrax provides a centralized platform for land assets, property records, leases, ownership information, surveys, and legal documentation.", "GIS parcel visualization helps organizations manage land banks, monitor encroachments, and maintain a reliable digital property registry."],
+            intro: ["Adyapragnya Land Asset Management System provides a centralized platform for land assets, property records, leases, ownership information, surveys, and legal documentation.", "GIS parcel visualization helps organizations manage land banks, monitor encroachments, and maintain a reliable digital property registry."],
             featureLabel: "Key Features",
             features: ["Land Bank Management", "GIS Parcel Mapping", "Ownership Records", "Lease & License Management", "Encroachment Monitoring", "Legal Case Tracking", "Survey & Mutation Records", "Document Repository", "Approval Workflows", "Dashboards & Reports"],
             benefits: ["Improve transparency in land management", "Simplify property administration", "Monitor encroachments effectively", "Reduce legal and operational risks", "Maintain a centralized digital registry"],
@@ -67,7 +67,7 @@
         },
         "face-recognition": {
             type: "Product",
-            title: "Face Recognition Access Control",
+            title: "Face Analytics (FaceAi)",
             subtitle: "Intelligent AI-Based Access Management & Attendance",
             intro: ["This AI-powered platform delivers secure, touchless entry management for enterprises, institutions, and commercial facilities.", "Face-based identity verification simplifies employee attendance, visitor management, authorization, and multi-location access monitoring from a centralized dashboard."],
             featureLabel: "Key Features",
@@ -87,7 +87,7 @@
         },
         "drone-survey": {
             type: "Service",
-            title: "Drone & Survey Services",
+            title: "GIS Data Services",
             subtitle: "High-Resolution Geospatial Data, Captured Efficiently",
             intro: ["We combine professional UAV platforms, survey control, and geospatial processing to capture accurate information for planning, engineering, monitoring, and inspection.", "Each engagement is designed around the required accuracy, terrain, coverage, outputs, and operating environment."],
             featureLabel: "Service Capabilities",
@@ -264,7 +264,7 @@
                     '<h1>' + escapeHtml(oem.title) + '</h1>' +
                     '<nav><ol class="breadcrumb">' +
                         '<li class="breadcrumb-item"><a href="index.html">Home</a></li>' +
-                        '<li class="breadcrumb-item"><a href="oem-products.html">OEM Products</a></li>' +
+                        '<li class="breadcrumb-item"><a href="partner-products.html">Partner Products</a></li>' +
                         '<li class="breadcrumb-item active" aria-current="page">' + escapeHtml(oem.title) + '</li>' +
                     '</ol></nav>' +
                 '</div></div></div></div>' +
@@ -273,13 +273,13 @@
                 '<div class="container"><div class="row">' +
                     '<div class="col-lg-4"><aside class="detail-sidebar oem-detail-sidebar">' +
                         '<div class="oem-detail-logo"><img src="' + oem.logo + '" alt="' + escapeHtml(oem.title) + ' logo"></div>' +
-                        '<span class="detail-type">OEM Partner</span>' +
+                        '<span class="detail-type">Partner Product</span>' +
                         '<h2>' + escapeHtml(oem.title) + '</h2>' +
                         '<p>' + oem.subtitle + '</p>' +
                         '<div class="detail-sidebar-actions">' +
                             '<a href="contact.html" class="btn-default btn-highlighted">Enquire Now</a>' +
                             '<a href="' + oem.website + '" target="_blank" rel="noopener" class="oem-website-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Visit ' + escapeHtml(oem.websiteLabel) + '</a>' +
-                            '<a class="detail-back-link" href="oem-products.html"><i class="fa-solid fa-arrow-left"></i> Back to OEM Products</a>' +
+                            '<a class="detail-back-link" href="partner-products.html"><i class="fa-solid fa-arrow-left"></i> Back to Partner Products</a>' +
                         '</div>' +
                     '</aside></div>' +
                     '<div class="col-lg-8"><div class="detail-main">' +

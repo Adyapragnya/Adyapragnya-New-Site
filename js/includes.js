@@ -29,7 +29,7 @@
                   '<li class="nav-item submenu"><a class="nav-link" href="products.html">Products</a>' +
                     '<ul class="products-menu-panel">' +
                       '<li class="nav-item"><a class="nav-link" href="products.html"><span class="menu-title">Our Products</span><small class="menu-note">Purpose-built digital platforms</small><i class="fa-solid fa-arrow-right menu-arrow" aria-hidden="true"></i></a></li>' +
-                      '<li class="nav-item"><a class="nav-link" href="oem-products.html"><span class="menu-title">OEM Products</span><small class="menu-note">Global technology partnerships</small><i class="fa-solid fa-arrow-right menu-arrow" aria-hidden="true"></i></a></li>' +
+                      '<li class="nav-item"><a class="nav-link" href="partner-products.html"><span class="menu-title">Partner Products</span><small class="menu-note">Global technology partnerships</small><i class="fa-solid fa-arrow-right menu-arrow" aria-hidden="true"></i></a></li>' +
                     '</ul>' +
                   '</li>' +
                   '<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>' +
@@ -78,7 +78,7 @@
               '<a class="footer-logo" href="index.html" aria-label="Adyapragnya Technologies home"><img class="company-logo-full" src="images/adyapragnya-logo.png" alt="Adyapragnya"></a>' +
               '<div class="footer-brand-text"><span class="footer-brand-name">Adyapragnya Technologies Private Limited</span><span class="footer-brand-tag">A Spatial Company</span></div>' +
             '</div>' +
-            '<div class="about-footer-content"><p>We deliver Geospatial Intelligence, Enterprise Software, AI, Remote Sensing, Drone, and Digital Transformation solutions that turn data into intelligence and intelligence into action.</p></div>' +
+            '<div class="about-footer-content"><p>We deliver Geospatial Intelligence, Enterprise Software, AI, Remote Sensing, GIS Data Services, and Digital Transformation solutions that turn data into intelligence and intelligence into action.</p></div>' +
             '<div class="about-footer-info-box">' +
               '<div class="footer-info-list"><ul>' +
                 '<li><img src="images/icon-phone-accent.svg" alt=""><span>Phone Number: </span><a href="tel:+918043702595">+91 80437 02595</a></li>' +
@@ -103,10 +103,10 @@
             '</ul></div>' +
             '<div class="footer-links"><h2>Products</h2><ul>' +
               '<li><a href="product-craftedge-erp.html">CraftEdge ERP</a></li>' +
-              '<li><a href="product-assettrax.html">AssetTrax</a></li>' +
+              '<li><a href="product-asset-management.html">Adyapragnya Asset Management System</a></li>' +
               '<li><a href="product-fieldforce.html">FieldForce Automation</a></li>' +
               '<li><a href="product-geotrix.html">GeoTrix</a></li>' +
-              '<li><a href="oem-products.html">OEM Products</a></li>' +
+              '<li><a href="partner-products.html">Partner Products</a></li>' +
             '</ul></div>' +
             '<div class="footer-links footer-contact-list">' +
               '<div class="footer-contact-item"><h2>Contact Information</h2><p>956, Punam Mahal Rd, Subash Nagar, Kengeri Satellite Town, Bengaluru, Karnataka 560060, India</p></div>' +

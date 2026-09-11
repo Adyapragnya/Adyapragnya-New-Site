@@ -15,7 +15,7 @@ site/
 ├── index.html        # Home
 ├── about.html
 ├── products.html       # 7 products
-├── oem-products.html   # 5 OEM partners
+├── partner-products.html   # 5 technology partners
 ├── services.html
 ├── solutions.html      # 13 solution areas
 ├── contact.html        # real address + Google map
